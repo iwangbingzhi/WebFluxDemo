@@ -73,6 +73,7 @@ public class CreateMonoTest {
         Flux.mergeSequential(Flux.intervalMillis(0,100).take(5),Flux.intervalMillis(50,100).take(5))
                 .toStream().forEach(System.out::println);
 
+        //flatMap()
         System.out.println("flatMap-----------------------");
         Flux.just(5,10).flatMap(x -> Flux.intervalMillis(x * 10,100).take(x))
                 .toStream().forEach(System.out::println);
@@ -81,10 +82,12 @@ public class CreateMonoTest {
         Flux.just(5,10).flatMapSequential(x -> Flux.intervalMillis(x * 10,100).take(x))
                 .toStream().forEach(System.out::println);
 
+        //concatMap()
         System.out.println("concatMap-----------------------");
         Flux.just(5,10).concatMap(x -> Flux.intervalMillis(x * 10,100).take(x))
                 .toStream().forEach(System.out::println);
 
+        //combineLatest()
         System.out.println("combineLatest-----------------------");
         Flux.combineLatest(
                 Arrays::toString,
