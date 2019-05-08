@@ -8,7 +8,7 @@ Flux 和 Mono 是 Reactor 中的两个基本概念。Flux 表示的是包含 0 �
 ### Flux类常用的静态方法
 ```interval(Duration period)和 interval(Duration delay, Duration period)```创建一个包含了从 0 开始递增的 Long 对象的序列。其中包含的元素按照指定的间隔来发布。除了间隔时间之外，还可以指定起始元素发布之前的延迟时间。</br>
 ```intervalMillis(long period)和 intervalMillis(long delay, long period)```与 ```interval()```方法的作用相同，只不过该方法通过毫秒数来指定时间间隔和延迟时间。</br>
-待更新ing</br>
+待更新ing-----------------------</br>
 </br>部分内容参考自 https://www.ibm.com/developerworks/cn/java/j-cn-with-reactor-response-encode/index.html?lnk=hmhm
 
 
